@@ -13,7 +13,8 @@ class IpTaobaoSpider(scrapy.Spider):
 
     def start_requests(self):
         yield scrapy.FormRequest('https://ip.taobao.com/outGetIpInfo', formdata={
-            "ip": "myip"
+            "ip": "myip",
+            "accessKey": "alibaba-inc",
         })
 
     def parse(self, response):
